@@ -1,0 +1,6 @@
+Testes de unidades testam uma única função sendo rápidos e independentes
+enquanto os funcionais utilizam várias funções que podem envolver dependências
+externas geralmente sendo mais lentos.
+
+No teste de unidade há a necessidade de se conhecer as classes e métodos
+do sistema ao contrário do funcional que foca no ponto de vista do usuário.
