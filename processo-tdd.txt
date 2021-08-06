@@ -1,0 +1,8 @@
+Aqui temos dois ciclos TDD aninhados.
+
+No primeiro escrevemos um teste funcional que ao falhar, passamos a intercalar
+entre a verificação de o teste passar e o outro ciclo até termo sucesso no teste.
+Ao obter sucesso, verificaos a necessidade de refatoração, que pode levar ao outro ciclo novamente até obtermos um resultado satisftório quando temos a opção de
+adicionar um novo teste funcional.
+
+No segundo ciclo criamos de testes unitários utilizando baby steps para faze-los passar e aplicar refatoração. Seguimos nesse ciclo até o teste funcional criado no outro ciclo passar.
