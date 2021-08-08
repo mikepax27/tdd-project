@@ -13,7 +13,7 @@ class NewVisitorTest(LiveServerTestCase):
     def tearDown(self):
         self.browser.quit()
 
-    def test_can_start_a_list_and_retrieve_it_later(self): 
+    def test_can_start_a_list_for_one_user(self):
     
         # Maria decidiu utilizar o novo app TODO. Ela entra em sua página principal:
         self.browser.get(self.live_server_url)
@@ -33,7 +33,7 @@ class NewVisitorTest(LiveServerTestCase):
         # Quando ela aperta enter, a página atualiza, e mostra a lista
         # "1: Estudar testes funcionais" como um item da lista TODO
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(1)
+
         self.wait_for_row_in_list_table('1: Estudar testes funcionais')
         
         # Ainda existe uma caixa de texto convidando para adicionar outro item
@@ -41,7 +41,6 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox = self.browser.find_element_by_id('id_new_item')  
         inputbox.send_keys('Estudar testes de unidade')
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(1)
 
         # A página atualiza novamente, e agora mostra ambos os itens na sua lista
         self.wait_for_row_in_list_table('1: Estudar testes funcionais')
